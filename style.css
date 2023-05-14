@@ -1,0 +1,16 @@
+.atl-gradiant {
+    background: rgb(54,31,71);
+    background: linear-gradient(34deg, rgba(54,31,71,1) 0%, rgba(95,51,130,1) 50%, rgba(152,61,224,1) 100%);
+}
+.mc-gradiant {
+    background: rgb(147,193,85);
+    background: linear-gradient(0deg, rgba(147,193,85,1) 0%, rgba(106,176,147,1) 50%, rgba(128,207,218,1) 100%);
+}
+.bh-gradiant {
+    background: rgb(254,192,195);
+    background: linear-gradient(180deg, rgba(254,192,195,1) 0%, rgba(254,254,254,1) 50%, rgba(83,85,110,1) 100%);
+}
+.fn-gradiant {
+    background: rgb(32,49,101);
+    background: linear-gradient(180deg, rgba(32,49,101,1) 0%, rgba(87,130,208,1) 50%, rgba(190,47,166,1) 100%);
+}

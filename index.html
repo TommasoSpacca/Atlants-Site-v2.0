@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/server-icon.png" />
     <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="js/bootstrap.js"></script>
+    <script src="script.js"></script>
     <title>Atlants - Home</title>
-</head>
-<body>
-    <header class="p-3 text-bg-dark shadow-lg">
+  </head>
+  <body class="bg-dark">
+    <header class="p-3 text-bg-dark shadow-lg" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
               <img class="bi me-2" width="64" height="64" role="img" aria-label="Bootstrap" src="assets/server-icon.png">
             </a>
             <ul class="nav text-end col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+              <li><a href="#base" class="nav-link px-2 text-white">Home</a></li>
+              <li><a href="#giochi" class="nav-link px-2 text-white">Giochi</a></li>
+              <li><a href="#team" class="nav-link px-2 text-white">Team</a></li>
+              <li><a href="#brawlhalla" class="nav-link px-2 text-white">BrawlHalla</a></li>
+              <li><a href="#discord" class="nav-link px-2 text-white">Discord</a></li>
+              <li><a href="#minecraft" class="nav-link px-2 text-white">Minecraft</a></li>
+              <li><a href="#supporto" class="nav-link px-2 text-white">Supporto</a></li>
+              <li><a href="#fortnite" class="nav-link px-2 text-white">Fortnite</a></li>
             </ul>
             <!--
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -33,16 +39,275 @@
           </div>
         </div>
       </header>
+      <div>
+        <h1>scemo chi legge</h1>
+      </div>
       <div class="px-4 py-5 text-center bg-dark text-white">
-        <img class="d-block mx-auto mb-4 w-auto" src="assets/server-icon.png" alt="" width="72" height="57">
-        <h1 class="display-5 fw-bold text-white">Centered hero</h1>
+        <!-- <img class="d-block mx-auto mb-4 w-auto" src="assets/server-icon.png" alt="" width="240" height="240"> -->
+      <h1 class="display-5 fw-bold text-white" id="base">Atlants</h1>
         <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <p class="lead mb-4">Gruppo di più di 13 ragazzi che collabrano per un unico obbiettivo...</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Esplora</button>
+            <button type="button" class="btn btn-outline-info btn-lg px-4">Info</button>
           </div>
         </div>
       </div>
-</body>
+      <div class="album py-5 bg-body-tertiary atl-gradiant" id="giochi">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/bh.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+                <div class="card-body">
+                  <p class="card-text">Team Competitivo di Brawlhalla che punta a migliorare se stesso e a diventare il miglior team di esso!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Info</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Prenota Colloquio</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/mc.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+                <div class="card-body">
+                  <p class="card-text">Server di Minecraft disponibile per tutti con tante modalità disponibili, come le bedwars competitive, la vanilla e in fine il roleplay Novarion States.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Info</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="copiaTesto()">Entra Subito</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/fn.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+                <div class="card-body">
+                  <p class="card-text">Team di Fortnite, giocatori competitivi e-sportivi, pronti al meglio per il meglio.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="email@"><button type="button" class="btn btn-sm btn-outline-secondary">Info</button></a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Prenota Colloquio</button>
+                    </div>
+                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="py-0 bg-dark" id="team">
+        <div class="container px-xxl-5 my-0">
+            <div class="text-center text-white p-4">
+                <h2 class="fw-bolder">Team</h2>
+                <p class="lead fw-normal text-whi mb-5">Ecco chi fa parte del progetto!</p>
+            </div>
+            <div class="row gx-5 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
+                <div class="col mb-5 mb-5 mb-xl-0">
+                    <div class="text-center text-white">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/814954215226605579/838352eeb4ef21c90eb4d30da145bda9.webp" alt="..." />
+                        <h5 class="fw-bolder">Tommaso#8978</h5>
+                        <div class="fst-italic text-white">Founder &amp; CEO</div>
+                    </div>
+                </div>
+                <div class="col mb-5 mb-5 mb-xl-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/547438743284482050/588fb0808e06daaa2baba94db1274692.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">P4rzival愛#4943</h5>
+                        <div class="fst-italic text-white">DEV &amp; ATL.IT Leader</div>
+                    </div>
+                </div>
+                <div class="col mb-5 mb-5 mb-sm-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/644589628589867018/46432c765d7d0bbb32017c1b9ad8fe04.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">! Nicoボス#3211</h5>
+                        <div class="fst-italic text-white">DEV &amp; ATL.IT Leader</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/886603384914870332/2bcc040c474cbde1ab1f271bf0a48734.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">Chicco2008#1990</h5>
+                        <div class="fst-italic text-white">DEV &amp; ATL.IT Leader</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/570016263602962452/cbba8f8a917652a383f452ead00763e6.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">Flavio,,,#7638</h5>
+                        <div class="fst-italic text-white">Admin Z</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/765148745561407499/faaad6aefca940e9d168f4e34212c5c7.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">One_Fire05#9397</h5>
+                        <div class="fst-italic text-white">Streamer &amp; ATL.IT Leader</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/560969349393809409/5a24f36d4a08f60caf5d6b919eb9da79.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">Entity30#0001</h5>
+                        <div class="fst-italic text-white">Tecnico Discord</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/742419692869648444/23408d78e6fb79d932a8fee9e47c6a5c.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">N4G_#9266</h5>
+                        <div class="fst-italic text-white">Tecnico Discord</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/780898184981118987/8f8b5778c6ef03d0878d06379498ebff.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">Snake-lol#5237</h5>
+                        <div class="fst-italic text-white">Atlants Leader</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/411840001555300353/3c199ca1c133db9d9a6e94966bff0223.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">seba_pinargoti#1468</h5>
+                        <div class="fst-italic text-white">FOAM Leader</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/508007043135832085/57ebec79ae9b9e2a33d1f11aed4d47e3.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">Cr3sh#4535</h5>
+                        <div class="fst-italic text-white">Admin Z</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/800416923099332610/c2f44db3b7c51902cd6f693924eed5b9.webp" alt="..." />
+                        <h5 class="fw-bolder text-white">Mrfieri_#9151</h5>
+                        <div class="fst-italic text-white">Helper AB</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://cdn.discordapp.com/avatars/709679829947252736/cf85be5f532986c034a813df22760303.webp" alt="..." />
+                        <h5 class="fw-bolder text-white text-center">pentacosiomedimno#3843</h5>
+                        <div class="fst-italic text-white">Mod Z</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <div class="bh-gradiant" id="brawlhalla">
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="assets/bh.jpg" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">BrawlHalla</h1>
+              <p class="lead text-dark">Descrizione di BrawlHalla che deve fare il Tommy :)</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Prenota Un Colloquio</button>
+                <a href="https://discord.gg/NczsnPkYPK"><button type="button" class="btn btn-outline-dark btn-lg px-4">Server Discord</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark" id="discord">
+        <div class="container col-xxl-auto px-5 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+            <div class="col-lg-5">
+              <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Server Discord</h1>
+              <p class="lead text-white">Questa che vedi è la sezione dedicata a Brawlhalla sul nostro server discord. Perchè non dai un'occhiata!</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="https://discord.gg/NczsnPkYPK"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Entra Nel Server</button></a>
+              </div>
+            </div>
+            <div class="col-auto col-sm-auto col-lg-7" >
+              <iframe src="https://discord.com/widget?id=1051922618447581294&theme=dark" width="375" height="400" class="d-block mx-lg-5 rounded"  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mc-gradiant" id="minecraft">
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="assets/mc.jpg" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">Minecraft Server</h1>
+              <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">"Atlants Network"</h1>
+              <p class="lead text-dark">Atlants ha un server minecraft minigame dove si distende in varie categorie, come le bedwrs rankate, una vanilla con una generazione custom e un server roleplay innovativo!</p>
+              <h4 class="fw-bold lh-1 mb-2 text-dark">Server IP: <a class="fw-bold lh-1 mb-1 text-dark" id="testo">mc.atlants.it</a></h4> 
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start lh-1 mb-3">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onclick="copiaTesto()">Entra Subito</button>
+                <a href="https://map.atlants.it"><button type="button" class="btn btn-outline-dark btn-lg px-4">Mappa della Vanilla</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark" id="supporto">
+        <div class="container col-xxl-auto px-5 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+            <div class="col-lg-5">
+              <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Hai Bisogno di Supporto?</h1>
+              <p class="lead text-white">Non ti preoccupare, se hai bisogno di supporto puoi scrivere direttamente o su discord oppure all'email: <a class="fw-bold">support@atlants.it</a></p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="https://discord.gg/NczsnPkYPK"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Entra Nel Server Discord</button></a>
+                <a href="mailto:support@atlants.it"><button type="button" class="btn btn-outline-info btn-lg px-4">Scrivi un'email</button></a>
+              </div>
+            </div>
+            <div class="col-auto col-sm-auto col-lg-7" >
+              <img src="https://www.sung.de/sites/default/files/styles/large/public/technical_support_services.jpg?itok=1pk6lMRD" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fn-gradiant" id="fortnite">
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="assets/fn.jpg" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Atlants FN Team</h1>
+              <p class="lead text-white">Il nostro team è composto da giocatori esperti, pronti a sfidare i migliori avversari in tornei e competizioni. Siamo dedicati a migliorare continuamente le nostre abilità di gioco, esplorando nuove strategie e tattiche per vincere.</p>
+              <p class="lead text-white">In questo sito troverai informazioni su di noi, sui nostri membri e sulle nostre attività. Potrai seguire le nostre partite in diretta streaming, scoprire i nostri successi più recenti e rimanere aggiornato sulle ultime notizie riguardanti il nostro team.</p>
+              <p class="lead text-white">Se sei un giocatore di Fortnite interessato a unirti a noi, non esitare a contattarci! Siamo sempre alla ricerca di nuovi talenti da aggiungere al nostro team.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start lh-1 mb-3">
+                <a href="mailto:support.fortnite@atlants.it"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Email di contatto</button></a>
+                <a href="https://discord.gg/NczsnPkYPK"><button type="button" class="btn btn-outline-info btn-lg px-4">Server Discord</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark">
+        <div class="container">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center border-top py-3 my-4" >
+            <div class="col-md-4 d-flex align-items-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+               <img class="bi" width="24" height="24" src="assets/server-icon.png">
+             </a>
+              <span class="mb-3 mb-md-0 text-white">© 2023 Atlants, Tutti i diritti riservati</span>
+            </div>
+           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><a class="text-body-secondary" href="https://www.twitch.tv/atlants_"><img class="bi" width="24" height="24" src="https://www.freepnglogos.com/uploads/purple-twitch-logo-png-18.png"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/atlants_clan/"><img class="bi" width="24" height="24" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="https://www.tiktok.com/@atlants_"><img class="bi" width="24" height="24" src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Tiktok-512.png"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/NczsnPkYPK"><img class="bi" width="24" height="24" src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></a></li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+  </body>
 </html>
