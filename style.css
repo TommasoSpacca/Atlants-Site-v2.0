@@ -14,6 +14,12 @@
     background: rgb(32,49,101);
     background: linear-gradient(180deg, rgba(32,49,101,1) 0%, rgba(87,130,208,1) 50%, rgba(190,47,166,1) 100%);
 }
-@media screen {
-    
+.easteregg {
+    display: none;
+}
+@media (max-width: 768px) {
+    .easteregg  {
+        color: rgba(33, 37, 41, 1);
+        display: block;
+    }
 }
