@@ -21,7 +21,8 @@
     display: none;
     
 }
-.atl-img {
+
+.atlants-img {
     width: 25%;
 }
 @media (max-width: 768px) {
@@ -29,7 +30,7 @@
         color: rgba(33, 37, 41, 1);
         display: block;
     }
-    .atl-img {
+    .atllants-img {
         width: 50%;
     }
 }
