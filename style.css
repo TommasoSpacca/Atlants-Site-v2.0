@@ -27,3 +27,11 @@
         display: block;
     }
 }
+.cardbtw {
+    transition: all 0.2s ease-out;
+    border-radius: 25;
+}
+.cardbtw:hover {
+    transform: scale(1.2);
+    z-index: 50;
+}
