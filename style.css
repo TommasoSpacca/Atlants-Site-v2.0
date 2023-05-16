@@ -21,10 +21,16 @@
     display: none;
     
 }
+.atlimg {
+    width: 25%;
+}
 @media (max-width: 768px) {
     .easteregg  {
         color: rgba(33, 37, 41, 1);
         display: block;
+    }
+    .atlimg {
+        width: 50%;
     }
 }
 .cardbtw {
