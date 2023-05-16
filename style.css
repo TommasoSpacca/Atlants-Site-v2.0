@@ -21,10 +21,26 @@
     display: none;
     
 }
-
 .atlants-img {
     width: 25%;
 }
+
+.cardbtw {
+    transition: all 0.2s ease-out;
+    border-radius: 25;
+}
+.cardbtw:hover {
+    transform: scale(1.1);
+    z-index: 50;
+}
+.image-indicator {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: center;
+    
+  }
 @media (max-width: 768px) {
     .easteregg  {
         color: rgba(33, 37, 41, 1);
@@ -33,12 +49,4 @@
     .atlants-img {
         width: 30%;
     }
-}
-.cardbtw {
-    transition: all 0.2s ease-out;
-    border-radius: 25;
-}
-.cardbtw:hover {
-    transform: scale(1.2);
-    z-index: 50;
 }
