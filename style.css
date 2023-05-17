@@ -41,6 +41,17 @@
     text-align: center;
     
   }
+  .button-container {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .centered-button {
+    display: block;
+    width: 200px; /* Larghezza desiderata */
+    margin: auto;
+  }
+  
 @media (max-width: 768px) {
     .easteregg  {
         color: rgba(33, 37, 41, 1);
