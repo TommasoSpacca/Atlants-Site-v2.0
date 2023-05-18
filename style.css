@@ -24,7 +24,6 @@
 .atlants-img {
     width: 25%;
 }
-
 .cardbtw {
     transition: all 0.2s ease-out;
     border-radius: 25;
@@ -40,18 +39,18 @@
     font-size: 14px;
     text-align: center;
     
-  }
-  .button-container {
+}
+.button-container {
     width: 100%;
     text-align: center;
-  }
+}
   
-  .centered-button {
+.centered-button {
     display: block;
     width: 200px; /* Larghezza desiderata */
     margin: auto;
-  }
-  
+}
+
 @media (max-width: 768px) {
     .easteregg  {
         color: rgba(33, 37, 41, 1);
