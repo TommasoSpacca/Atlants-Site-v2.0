@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/bootstrap.js"></script>
     <script src="script.js"></script>
-    <script src="script-cd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="cookies.js"></script>
     <title>Atlants</title>
   </head>
   <body class="bg-dark">
@@ -62,6 +63,22 @@
         <h2 class="container container-atl text-center text-dark px-5 py-3">Data di pubblicazione di Atlants</h2>
         <iframe id="online-alarm-kur-iframe" src="https://embed-countdown.onlinealarmkur.com/it/#2023-06-09T00:00:00@Europe%2FRome" width="420" height="240" style="display: block; margin: 0px auto; border: 0px;" class="w-50"></iframe>
       </div>
+      
+      <div id="cookie-banner" class="alert alert-info alert-dismissible fade show position-fixed bottom-0 right-0 mb-4 mr-4" role="alert" style="z-index: 9998;">
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+          <div class="flex-grow-1">
+            Ti piacciono i Biscotti 🍪? Si da il caso che Atlants utilizza i cookie per offrirti un'esperienza migliore, clicca qui sei hai bisogno di...
+            <a href="https://www.privacypolicygenerator.info/live.php?token=PuTI9gnGEwVQbykylK5r4NO9laLN3KjT" class="alert-link">Maggiori informazioni</a>
+          </div>
+          <div class="text-right mt-2 mt-sm-0">
+            <button type="button" class="btn btn-primary btn-sm" id="cookie-accept">Accetta</button>
+          </div>
+          <button type="button" class="btn btn-danger close" data-dismiss="alert" aria-label="Chiudi">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>           
+
       <div class="album py-5 bg-body-tertiary atl-gradiant" id="giochi">
         <div class="container">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -203,7 +220,7 @@
               <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                <img class="bi" width="32" height="32" src="assets/server-icon.png">
              </a>
-              <span class="mb-3 mb-md-0 "><a class="text-white" href="https://github.com/Open-Gaming-Studios/Atlants-Site-v2.0/blob/main/LICENSE">© 2023 Atlants, Tutti i diritti riservati</a></span>
+              <span class="mb-3 mb-md-0 "><a class="text-white" href="privacy.html">© 2023 Atlants, Tutti i diritti riservati</a></span>
             </div>
               <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
               <li class="ms-3"><a class="text-body-secondary" href="https://www.twitch.tv/atlants_"><img class="bi" width="32" height="32" src="https://www.freepnglogos.com/uploads/purple-twitch-logo-png-18.png"></a></li>

@@ -14,6 +14,14 @@
     background: rgb(32,49,101);
     background: linear-gradient(180deg, rgba(32,49,101,1) 0%, rgba(87,130,208,1) 50%, rgba(190,47,166,1) 100%);
 }
+
+#cookie-banner {
+    max-width: 400px; /* Personalizza la larghezza massima del banner */
+    margin: 20px; /* Personalizza il margine esterno del banner */
+    z-index: 9999; /* Imposta un valore di z-index appropriato per garantire che il banner sia sovrapposto ad altri elementi */
+  }
+  
+
 .easteregg-obb {
     color: rgba(33, 37, 41, 1);
 }
