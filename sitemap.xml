@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://atlants.it">
-  <url>
-    <loc>https://atlants.it/index.html</loc>
-    <lastmod>2018-06-04</lastmod>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+   <url>
+      <loc>https://atlants.it/</loc>
+      <priority>1.0</priority>
+      <xhtml:link rel="icon" href="https://www.atlants.it/assets/server-icon.png" />
+      <xhtml:meta property="og:description" content="Benvenuti in Atlants - Un gruppo di ragazzi." />
+      <image>
+      <loc>https://atlants.it/assets/ATLANTS_LOGO_SCRITTA.png</loc>
+      <caption>Immagine illustrativa della home principale</caption>
+      </image>
+   </url>
+   <url>
+      <loc>https://atlants.it/minecraft.html</loc>
+      <priority>0.8</priority>
+      <xhtml:link rel="icon" href="https://www.atlants.it/assets/server-icon.png" />
+      <xhtml:meta property="og:description" content="Atlants Network - Nuovo server minecraft disponibile per tutti." />
+      <image>
+      <loc>https://atlants.it/assets/mc.jpg</loc>
+      <caption>Immagine illustrativa del server minecraft</caption>
+      </image>
+   </url>
+   <url>
+      <loc>https://atlants.it/fortnite.html</loc>
+      <priority>0.8</priority>
+      <xhtml:link rel="icon" href="https://www.atlants.it/assets/server-icon.png" />
+      <xhtml:meta property="og:description" content="Atlants Team - Team di Fortnite Competitivo." />
+      <image>
+      <loc>https://atlants.it/assets/fn.jpg</loc>
+      <caption>Immagine illustrativa di Fortnite</caption>
+      </image>
+   </url>
+   <url>
+      <loc>https://atlants.it/brawlhalla.html</loc>
+      <priority>0.7</priority>
+      <xhtml:link rel="icon" href="https://www.atlants.it/assets/server-icon.png" />
+      <xhtml:meta property="og:description" content="FOAM Team - Team di BrawlHalla Competitivo." />
+      <image>
+      <loc>https://atlants.it/assets/bh.jpg</loc>
+      <caption>Immagine illustrativa della home principale</caption>
+      </image>
+   </url>
+   <url>
+      <loc>https://map.atlants.it:8100/</loc>
+      <priority>0.6</priority>
+      <xhtml:link rel="icon" href="https://www.atlants.it/assets/server-icon.png" />
+      <xhtml:meta property="og:description" content="Mappa del server minigame di Atlants." />
+      <image>
+      <loc>https://atlants.it/assets/vanilla1.png</loc>
+      <caption>Immagine illustrativa della Vanilla di Minecraft</caption>
+      </image>
+   </url>
 </urlset>
