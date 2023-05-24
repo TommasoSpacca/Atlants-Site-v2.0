@@ -7,6 +7,7 @@
          <image:loc>https://atlants.it/assets/ATLANTS_LOGO_SCRITTA.png</image:loc>
          <image:caption>Immagine illustrativa della home principale</image:caption>
       </image:image>
+      <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
    <url>
       <loc>https://atlants.it/minecraft.html</loc>
@@ -15,6 +16,7 @@
          <image:loc>https://atlants.it/assets/mc.jpg</image:loc>
          <image:caption>Immagine illustrativa del server minecraft</image:caption>
       </image:image>
+      <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
    <url>
       <loc>https://atlants.it/fortnite.html</loc>
@@ -23,6 +25,7 @@
          <image:loc>https://atlants.it/assets/fn.jpg</image:loc>
          <image:caption>Immagine illustrativa di Fortnite</image:caption>
       </image:image>
+      <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
    <url>
       <loc>https://atlants.it/brawlhalla.html</loc>
@@ -31,6 +34,7 @@
          <image:loc>https://atlants.it/assets/bh.jpg</image:loc>
          <image:caption>Immagine illustrativa della home principale</image:caption>
       </image:image>
+      <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
    <url>
       <loc>https://map.atlants.it:8100/</loc>
@@ -39,5 +43,6 @@
          <image:loc>https://atlants.it/assets/vanilla1.png</image:loc>
          <image:caption>Immagine illustrativa della Vanilla di Minecraft</image:caption>
       </image:image>
+      <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
 </urlset>
