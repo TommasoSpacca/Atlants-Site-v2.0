@@ -131,43 +131,70 @@
                 </div>
                 <script>
                     document.addEventListener("DOMContentLoaded", function() {
-                    var images = [
-                        "assets/vanilla1.png",
-                        "assets/vanilla2.png",
-                        "assets/vanilla3.png",
-                        "assets/vanilla4.png",
-                        "assets/vanilla5.png",
-                        "assets/vanilla6.png",
-                        "assets/vanilla7.png",
-                        "assets/vanilla8.png"
-                      ];
+  var images = [
+    "assets/vanilla1.png",
+    "assets/vanilla2.png",
+    "assets/vanilla3.png",
+    "assets/vanilla4.png",
+    "assets/vanilla5.png",
+    "assets/vanilla6.png",
+    "assets/vanilla7.png",
+    "assets/vanilla8.png"
+  ];
 
-                    var currentIndex = 0;
-                    var imageElement = document.getElementById("myImage");
-                    var prevButton = document.getElementById("prevButton");
-                    var nextButton = document.getElementById("nextButton");
-                    var imageIndicator = document.getElementById("imageIndicator");
+  var currentIndex = 0;
+  var imageElement = document.getElementById("myImage");
+  var prevButton = document.getElementById("prevButton");
+  var nextButton = document.getElementById("nextButton");
+  var imageIndicator = document.getElementById("imageIndicator");
+  var autoChangeInterval;
 
-                    function updateImageIndicator() {
-                      var currentImageIndex = currentIndex + 1;
-                      var totalImages = images.length;
-                      imageIndicator.textContent = currentImageIndex + "/" + totalImages;
-                    }
-                
-                    prevButton.addEventListener("click", function() {
-                      currentIndex = (currentIndex - 1 + images.length) % images.length;
-                      imageElement.src = images[currentIndex];
-                      updateImageIndicator();
-                    });
-                
-                    nextButton.addEventListener("click", function() {
-                      currentIndex = (currentIndex + 1) % images.length;
-                      imageElement.src = images[currentIndex];
-                      updateImageIndicator();
-                    });
-                
-                    updateImageIndicator();
-                  });
+  function updateImageIndicator() {
+    var currentImageIndex = currentIndex + 1;
+    var totalImages = images.length;
+    imageIndicator.textContent = currentImageIndex + "/" + totalImages;
+  }
+
+  function changeImage(index) {
+    currentIndex = index;
+    imageElement.src = images[currentIndex];
+    updateImageIndicator();
+  }
+
+  prevButton.addEventListener("click", function() {
+    var newIndex = (currentIndex - 1 + images.length) % images.length;
+    changeImage(newIndex);
+  });
+
+  nextButton.addEventListener("click", function() {
+    var newIndex = (currentIndex + 1) % images.length;
+    changeImage(newIndex);
+  });
+
+  function startAutoChange() {
+    autoChangeInterval = setInterval(function() {
+      var newIndex = (currentIndex + 1) % images.length;
+      changeImage(newIndex);
+    }, 3000);
+  }
+
+  function stopAutoChange() {
+    clearInterval(autoChangeInterval);
+  }
+
+  imageElement.addEventListener("load", startAutoChange);
+
+  // Preload images
+  var preloadedImages = [];
+  for (var i = 0; i < images.length; i++) {
+    var img = new Image();
+    img.src = images[i];
+    preloadedImages.push(img);
+  }
+
+  changeImage(currentIndex);
+});
+
                 </script>
             </div>
         </div>
