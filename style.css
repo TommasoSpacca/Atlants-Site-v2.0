@@ -104,6 +104,13 @@
     margin: auto;
 }
 
+.box-card{
+  color: #391b4a;
+  box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.2);
+  border-radius: 3%;
+  padding: 5px;
+}
+
 @media (max-width: 768px) {
     .easteregg  {
         color: rgba(33, 37, 41, 1);
@@ -111,5 +118,10 @@
     }
     .atlants-img {
         width: 30%;
+    }
+    .box-card{
+      border-radius: 0%;
+      box-shadow: 0px 0px 50px 25px rgba(0,0,0,0);
+      padding: 0  px;
     }
 }
