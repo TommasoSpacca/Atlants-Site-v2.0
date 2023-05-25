@@ -15,6 +15,52 @@
     background: linear-gradient(180deg, rgba(32,49,101,1) 0%, rgba(87,130,208,1) 50%, rgba(190,47,166,1) 100%);
 }
 
+/* Stili per la barra di scorrimento */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(33, 37, 41, 1);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Stili per il pulsante di salto */
+  .scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(33, 37, 41, 1);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .scroll-button:hover {
+    background-color: rgb(47, 52, 58);
+  }
+  
+  /* Mostra il pulsante di salto quando si scorre verso il basso */
+  body.scrolling-down .scroll-button {
+    opacity: 1;
+    visibility: visible;
+  }
+  
 #cookie-banner {
     max-width: 400px; /* Personalizza la larghezza massima del banner */
     margin: 20px; /* Personalizza il margine esterno del banner */
