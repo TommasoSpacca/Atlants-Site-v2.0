@@ -126,91 +126,17 @@
                   <br> 
                   <div class="col-auto col-sm-auto col-lg-7 d-md-flex button-container">
                     <button type="button" class="btn btn-outline-dark btn-lg px-4 centered-button" id="prevButton">&larr; Indietro</button>
+                    <button type="button" class="btn btn-outline-dark btn-lg px-4 centered-button" id="resetButton">Reset</button>
                     <button type="button" class="btn btn-outline-dark btn-lg px-4 centered-button" id="nextButton">Avanti &rarr;</button>
                   </div>
                 </div>
-                <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        var images = [
-                            "assets/vanilla1.png",
-                                "assets/vanilla2.png",
-                                    "assets/vanilla3.png",
-                                        "assets/vanilla4.png",
-                                            "assets/vanilla5.png",
-                                                "assets/vanilla6.png",
-                                                    "assets/vanilla7.png",
-                                                        "assets/vanilla8.png"
-                                                          ];
-
-                                                            var currentIndex = 0;
-                                                              var imageElement = document.getElementById("myImage");
-                                                                var prevButton = document.getElementById("prevButton");
-                                                                  var nextButton = document.getElementById("nextButton");
-                                                                    var imageIndicator = document.getElementById("imageIndicator");
-                                                                      var autoChangeInterval;
-
-                                                                        function updateImageIndicator() {
-                                                                            var currentImageIndex = currentIndex + 1;
-                                                                                var totalImages = images.length;
-                                                                                    var remainingTime = 5; // Tempo rimanente in secondi per il cambio automatico
-                                                                                        imageIndicator.textContent = currentImageIndex + "/" + totalImages + " - Cambio tra " + remainingTime + "s";
-                                                                                          }
-
-                                                                                            function changeImage(index) {
-                                                                                                currentIndex = index;
-                                                                                                    imageElement.src = images[currentIndex];
-                                                                                                        updateImageIndicator();
-                                                                                                          }
-
-                                                                                                            prevButton.addEventListener("click", function() {
-                                                                                                                var newIndex = (currentIndex - 1 + images.length) % images.length;
-                                                                                                                    changeImage(newIndex);
-                                                                                                                      });
-
-                                                                                                                        nextButton.addEventListener("click", function() {
-                                                                                                                            var newIndex = (currentIndex + 1) % images.length;
-                                                                                                                                changeImage(newIndex);
-                                                                                                                                  });
-
-                                                                                                                                    function startAutoChange() {
-                                                                                                                                        autoChangeInterval = setInterval(function() {
-                                                                                                                                              var randomIndex = Math.floor(Math.random() * images.length);
-                                                                                                                                                    changeImage(randomIndex);
-                                                                                                                                                        }, 5000);
-                                                                                                                                                          }
-
-                                                                                                                                                            function stopAutoChange() {
-                                                                                                                                                                clearInterval(autoChangeInterval);
-                                                                                                                                                                  }
-
-                                                                                                                                                                    imageElement.addEventListener("load", function() {
-                                                                                                                                                                        startAutoChange();
-                                                                                                                                                                            setInterval(function() {
-                                                                                                                                                                                  updateImageIndicator();
-                                                                                                                                                                                      }, 1000); // Aggiorna l'indicatore ogni secondo
-                                                                                                                                                                                        });
-
-                                                                                                                                                                                          // Preload images
-                                                                                                                                                                                            var preloadedImages = [];
-                                                                                                                                                                                              for (var i = 0; i < images.length; i++) {
-                                                                                                                                                                                                  var img = new Image();
-                                                                                                                                                                                                      img.src = images[i];
-                                                                                                                                                                                                          preloadedImages.push(img);
-                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                              changeImage(currentIndex);
-                                                                                                                                                                                                              });
-
-                   
-                                                                                                                                                                                                            })
-
-                </script>
+                <script src="mc-script.js"></script>
             </div>
         </div>
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
               <div class="col-10 col-sm-8 col-lg-6">
-                <img src="assets/bw mc.png" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                <img src="assets/bw mc.png" class="d-block mx-lg-auto img-fluid rounded" alt="Vanilla Images" width="700" height="500" loading="lazy">
               </div>
               <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">Le Bedwars</h1>

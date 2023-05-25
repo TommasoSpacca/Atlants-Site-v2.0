@@ -59,6 +59,17 @@
     margin: auto;
 }
 
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+
 @media (max-width: 768px) {
     .easteregg  {
         color: rgba(33, 37, 41, 1);
