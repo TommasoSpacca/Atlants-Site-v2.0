@@ -7,8 +7,8 @@
     background: linear-gradient(0deg, rgba(147,193,85,1) 0%, rgba(106,176,147,1) 50%, rgba(128,207,218,1) 100%);
 }
 .bh-gradiant {
-    background: rgb(254,192,195);
-    background: linear-gradient(180deg, rgba(254,192,195,1) 0%, rgba(254,254,254,1) 50%, rgba(83,85,110,1) 100%);
+    background: rgb(5,161,174);
+    background: linear-gradient(0deg, rgba(5,161,174,1) 0%, rgba(11,144,168,1) 50%, rgba(2,144,184,1) 100%);
 }
 .fn-gradiant {
     background: rgb(32,49,101);
@@ -21,7 +21,6 @@
     z-index: 9999; /* Imposta un valore di z-index appropriato per garantire che il banner sia sovrapposto ad altri elementi */
   }
   
-
 .easteregg-obb {
     color: rgba(33, 37, 41, 1);
 }
@@ -58,17 +57,6 @@
     width: 200px; /* Larghezza desiderata */
     margin: auto;
 }
-
-.fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-.fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-  
 
 @media (max-width: 768px) {
     .easteregg  {
