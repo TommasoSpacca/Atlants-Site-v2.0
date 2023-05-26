@@ -111,6 +111,20 @@
   padding: 5px;
 }
 
+@keyframes rotation {
+  from {
+     transform: rotate(360deg);
+  }
+  to {
+     transform: rotate(0deg);
+  }
+}
+
+/* Esempio con immagine */
+.ruotano-le-palle {
+  animation: rotation 1.1s linear infinite;
+}
+
 @media (max-width: 768px) {
     .easteregg  {
         color: rgba(33, 37, 41, 1);
