@@ -7,7 +7,23 @@ document.addEventListener("DOMContentLoaded", function() {
     "assets/vanilla5.png",
     "assets/vanilla6.png",
     "assets/vanilla7.png",
-    "assets/vanilla8.png"
+    "assets/vanilla8.png",
+    "assets/vanilla9.png",
+    "assets/vanilla10.png",
+    "assets/vanilla11.png",
+    "assets/vanilla12.png",
+    "assets/vanilla13.png",
+    "assets/vanilla14.png",
+    "assets/vanilla15.png",
+    "assets/vanilla16.png",
+    "assets/vanilla17.png",
+    "assets/vanilla18.png",
+    "assets/vanilla19.png",
+    "assets/vanilla20.png",
+    "assets/vanilla21.png",
+    "assets/vanilla22.png",
+    "assets/vanilla23.png",
+    "assets/vanilla24.png"
   ];
 
   var currentIndex = 0;
