@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     "assets/vanilla9.png",
     "assets/vanilla10.png",
     "assets/vanilla11.png",
-    "assets/vanilla12.png",
     "assets/vanilla13.png",
     "assets/vanilla14.png",
     "assets/vanilla15.png",
