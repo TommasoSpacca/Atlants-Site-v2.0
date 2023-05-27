@@ -23,6 +23,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="cookies.js"></script>
   <script src="https://kit.fontawesome.com/7855b5af31.js" crossorigin="anonymous"></script>
+  <script src="mc-script.js"></script>
   <script>
     $(window).scroll(function () {
       if ($(this).scrollTop() > 0) {
@@ -110,23 +111,22 @@
       </button>
     </div>
   </div>
-
-  <div class="mc-gradiant" id="minecraft">
+  <div class="mc-gradiant" id="myDiv">
     <div class=" col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
         <!--<div class="col-10 col-sm-8 col-lg-6">
                 <img src="assets/lobby mc.png" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
               </div>-->
         <div class="col-lg-6 text-center">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">ATLANTS NETWORK</h1>
-          <p class="lead text-dark">Se ti piace Minecraft sei nella sezione giusta, Atlants appunto ha un network di
+          <h1 class="display-5 text-dark fw-bold lh-1 mb-3" id="myText">ATLANTS NETWORK</h1>
+          <p class="lead text-dark" id="myText">Se ti piace Minecraft sei nella sezione giusta, Atlants appunto ha un network di
             minecraft pieno di modalità innovative o modificate!</p>
-          <h1 class="display-5 fw-bold lh-1 mb-2 text-dark text-center">Server IP: <br><a
-              class="fw-bold lh-1 mb-1 text-dark" id="testo">mc.atlants.it</a></h1>
+          <h1 class="display-5 fw-bold lh-1 mb-2 text-dark text-center" id="myText">Server IP: <br><a
+              class="fw-bold lh-1 mb-1 text-dark" id="myText">mc.atlants.it</a></h1>
           <!--<h4 class="fw-bold lh-1 mb-2 text-dark">Server IP: <a class="fw-bold lh-1 mb-1 text-dark" id="testo">mc.atlants.it</a></h4>-->
           <br>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start lh-1 mb-3 button-container">
-            <button type="button" class="btn btn-primary btn-lg px-4  centered-button" onclick="copiaTesto()">Entra
+            <button type="button" class="btn btn-primary btn-lg px-4 centered-button" onclick="copiaTesto()">Entra
               Subito</button>
           </div>
         </div>
@@ -139,8 +139,8 @@
             height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">La Lobby</h1>
-          <p class="lead text-dark">Questa è la lobby centrale del server dove potrai battere il record di uno dei tanti
+          <h1 class="text-dark display-5 fw-bold lh-1 mb-3 " id="myText">La Lobby</h1>
+          <p class="lead text-dark" id="myText">Questa è la lobby centrale del server dove potrai battere il record di uno dei tanti
             parkour nascosti e decidere in quale modalità entrare</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start lh-1 mb-3">
             <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onclick="copiaTesto()">Entra
@@ -152,14 +152,14 @@
     <div class="container col-xxl-auto px-5 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
         <div class="col-lg-5">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">La Vanilla</h1>
-          <p class="lead text-dark">Ecco a voi una vanilla rivoluzionaria con una generazione modificata e tanto altro!
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-dark" id="myText">La Vanilla</h1>
+          <p class="lead text-dark" id="myText">Ecco a voi una vanilla rivoluzionaria con una generazione modificata e tanto altro!
           </p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <a href=""><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Entra Nel Server</button></a>
             <!--<a href="https://discord.gg/NczsnPkYPK"><button type="button" class="btn btn-outline-dark btn-lg px-4">Entra Nel Server Discord</button></a>-->
             <a href="https://map.atlants.it:8100" target="_blank"><button type="button"
-                class="btn btn-outline-dark btn-lg px-4">Visita
+                class="btn btn-secondary btn-lg px-4">Visita
                 la mappa!</button></a>
           </div>
         </div>
@@ -171,15 +171,14 @@
             style="border-radius: 10px; border-top-left-radius: 0px; border-top-right-radius: 0px;"></div>
           <br>
           <div class="col-auto col-sm-auto col-lg-7 d-md-flex button-container">
-            <button type="button" class="btn btn-outline-dark btn-lg px-4 centered-button" id="prevButton">&larr;
+            <button type="button" class="btn btn-secondary btn-lg px-4 centered-button" id="prevButton">&larr;
               Indietro</button>
-            <button type="button" class="btn btn-outline-dark btn-lg px-4 centered-button"
+            <button type="button" class="btn btn-secondary btn-lg px-4 centered-button"
               id="resetButton">Reset</button>
-            <button type="button" class="btn btn-outline-dark btn-lg px-4 centered-button" id="nextButton">Avanti
+            <button type="button" class="btn btn-secondary btn-lg px-4 centered-button" id="nextButton">Avanti
               &rarr;</button>
           </div>
         </div>
-        <script src="mc-script.js"></script>
       </div>
     </div>
     <div class="container col-xxl-8 px-4 py-5">
@@ -189,8 +188,8 @@
             height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">Le Bedwars</h1>
-          <p class="lead text-dark">Le bedwars di atlants non sono le classiche bedwars, appunto sono delle bedwars
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-dark" id="myText">Le Bedwars</h1>
+          <p class="lead text-dark" id="myText">Le bedwars di atlants non sono le classiche bedwars, appunto sono delle bedwars
             competitive con un rank ottenibile dalla somma dei punti totalizzati in una partita, appunto per ogni azione
             eseguita dal giocatore (Kill, Distruzione del letto, etc...) gli verranno garantiti dei punti o rimossi.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start lh-1 mb-3">
@@ -203,12 +202,12 @@
     <div class="container col-xxl-auto px-5 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
         <div class="col-lg-5">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">RolePlay <br> Novarion States</h1>
-          <p class="lead text-dark">Le Roleplay sono una modalità di gioco innovativa di Atlants, cosa aspetti ad
+          <h1 class="display-5 fw-bold lh-1 mb-3" class="text-dark" id="myText">RolePlay <br> Novarion States</h1>
+          <p class="lead text-dark" id="myText">Le Roleplay sono una modalità di gioco innovativa di Atlants, cosa aspetti ad
             entrare? Entra ora!</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <a href=""><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Entra Nel Server</button></a>
-            <a href="https://discord.gg/NczsnPkYPK"><button type="button" class="btn btn-outline-dark btn-lg px-4">Entra
+            <a href="https://discord.gg/NczsnPkYPK"><button type="button" class="btn btn-secondary btn-lg px-4">Entra
                 Nel Server Discord</button></a>
           </div>
         </div>

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
   var images = [
     "assets/vanilla1.png",
     "assets/vanilla2.png",
@@ -24,26 +24,40 @@ document.addEventListener("DOMContentLoaded", function() {
     "assets/vanilla23.png",
     "assets/vanilla24.png"
   ];
+  var targetImages = [
+    "assets/vanilla14.png", 
+    "assets/vanilla15.png", 
+    "assets/vanilla17.png", 
+    "assets/vanilla18.png", 
+    "assets/vanilla19.png", 
+    "assets/vanilla20.png", 
+    "assets/vanilla22.png", 
+    "assets/vanilla23.png", 
+    "assets/vanilla24.png"
+  ];
 
   var currentIndex = 0;
-  var imageElement = document.getElementById("myImage");
-  var prevButton = document.getElementById("prevButton");
-  var nextButton = document.getElementById("nextButton");
-  var resetButton = document.getElementById("resetButton");
-  var imageIndicator = document.getElementById("imageIndicator");
+  var myImage = $("#myImage")[0];
+  var prevButton = $("#prevButton");
+  var nextButton = $("#nextButton");
+  var resetButton = $("#resetButton");
+  var imageIndicator = $("#imageIndicator");
+  var myDiv = $("#myDiv");
+  var myText = $("#myText");
   var autoChangeInterval;
 
   function updateImageIndicator() {
     var currentImageIndex = currentIndex + 1;
     var totalImages = images.length;
 
-    imageIndicator.textContent = currentImageIndex + "/" + totalImages;
+    imageIndicator.text(currentImageIndex + "/" + totalImages);
   }
 
   function changeImage(index) {
     currentIndex = index;
-    imageElement.src = images[currentIndex];
+    myImage.src = images[currentIndex];
     updateImageIndicator();
+    checkImageBackground();
   }
 
   function startAutoChange() {
@@ -65,6 +79,16 @@ document.addEventListener("DOMContentLoaded", function() {
     startAutoChange();
   }
 
+  function checkImageBackground() {
+    var currentImage = images[currentIndex];
+
+    if (targetImages.includes(currentImage)) {
+      myDiv.removeClass("mc-gradiant").addClass("nether-gradiant");
+    } else {
+      myDiv.removeClass("nether-gradiant").addClass("mc-gradiant");
+    }
+  }
+
   function preloadImages() {
     var loadedImages = 0;
 
@@ -76,31 +100,31 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
 
-    images.forEach(function(imageUrl) {
+    $.each(images, function(index, imageUrl) {
       var img = new Image();
       img.onload = imageLoaded;
       img.src = imageUrl;
     });
   }
 
-  imageElement.addEventListener("load", function() {
+  myImage.addEventListener("load", function() {
     updateImageIndicator();
+    checkImageBackground();
   });
 
-  resetButton.addEventListener("click", reset);
+  resetButton.on("click", reset);
 
-  prevButton.addEventListener("click", function() {
+  prevButton.on("click", function() {
     stopAutoChange();
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     changeImage(currentIndex);
   });
 
-  nextButton.addEventListener("click", function() {
+  nextButton.on("click", function() {
     stopAutoChange();
     currentIndex = (currentIndex + 1) % images.length;
     changeImage(currentIndex);
   });
 
-  // Carica le immagini in anticipo
   preloadImages();
 });
