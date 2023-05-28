@@ -33,12 +33,81 @@
     });
   </script>
   <title>Atlants - Chi Siamo</title>
+  <style>
+    .card {
+      width: 200px;
+      height: 300px;
+      perspective: 1000px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #983DE0;
+    }
+
+    .card img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card-back {
+      background-color: #5F3382;
+      color: #fff;
+      padding: 10px;
+      transform: rotateY(180deg);
+    }
+  </style>
+  <script>
+    function toggleSidebar() {
+      $('#sidebar').toggleClass('show');
+      $('#overlay').toggleClass('show');
+    }
+
+    $(document).mouseup(function(e) {
+      var sidebar = $('#sidebar');
+      if (!sidebar.is(e.target) && sidebar.has(e.target).length === 0) {
+        sidebar.removeClass('show');
+        $('#overlay').removeClass('show');
+      }
+    });
+  </script>
 </head>
 
 <body class="bg-dark">
   <nav class="navbar navbar-dark bg-dark fixed-top shadow-lg">
     <div class="container">
-      <a class="navbar-brand" href="#"><img class="navbar-brand" src="assets/server-icon.png"></a>
+      <button class="navbar-toggler" type="button" onclick="toggleSidebar()"><img width="32" src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></button>
+      <div class="sidebar" id="sidebar">
+        <span class="close-sidebar" onclick="toggleSidebar()">&times;</span>
+        <iframe class="discord-iframe" src="https://ptb.discord.com/widget?id=1051922618447581294&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </div>
+      <a class="navbar-brand" href="index.html"><img class="navbar-brand" src="assets/server-icon.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -54,7 +123,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link  m-1" aria-current="page" href="index.html"><h4>Home</h4></a>
+              <a class="nav-link m-1" aria-current="page" href="index.html"><h4>Home</h4></a>
             </li>
             <li class="nav-item m-1"><h5>Prodotti</h5></li>
             <li class="nav-tabs"></li>
@@ -69,7 +138,7 @@
             </li>
             <li class="nav-tabs"></li>
             <li class="nav-item">
-              <a class="nav-link m-1 active" href="about.html"><h4>Chi Siamo</h4></a>
+              <a class="nav-link active m-1" href="about.html"><h4>Chi Siamo</h4></a>
             </li>
             <li class="nav-item">
               <a class="nav-link m-1" href="index.html#supporto"><h4>Supporto</h4></a>
@@ -79,6 +148,7 @@
       </div>
     </div>
   </nav>
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
   <div>
     <h1 class="easteregg-obb">scemo chi legge</h1>
     <h1 class="easteregg">scemo chi legge</h1>
@@ -138,338 +208,334 @@
           <h2 class="fw-bolder">Membri del Team</h2>
           <p class="lead fw-normal text-whi mb-5">Ecco chi fa parte del progetto!</p>
         </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">Owner</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
+        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-5 justify-content-center">
           <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center text-white">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/814954215226605579/838352eeb4ef21c90eb4d30da145bda9.webp"
-                alt="..." />
-              <h5 class="fw-bolder">Tommaso#8978</h5>
-              <div class="fst-italic text-white">Founder &amp; CEO</div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/814954215226605579/838352eeb4ef21c90eb4d30da145bda9.webp"
+                    alt="Profilo DS">
+                  <h4>Tommaso#8978</h4>
+                  <p>Founder &amp; CEO</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/814954215226605579/838352eeb4ef21c90eb4d30da145bda9.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/547438743284482050/588fb0808e06daaa2baba94db1274692.webp"
+                    alt="Profilo DS">
+                  <h4>P4rzival#4943</h4>
+                  <p>DEV &amp; ATL.IT Leader</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/547438743284482050/588fb0808e06daaa2baba94db1274692.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img
+                    src="https://cdn.discordapp.com/avatars/644589628589867018/a_336a30dce6e53893f652f07d0f93ccc1.gif"
+                    alt="Profilo DS">
+                  <h4>! Nicoボス#3211</h4>
+                  <p>DEV &amp; ATL.IT Leader</p>
+                </div>
+                <div class="card-back">
+                  <img
+                    src="https://cdn.discordapp.com/avatars/644589628589867018/a_336a30dce6e53893f652f07d0f93ccc1.gif"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/765148745561407499/faaad6aefca940e9d168f4e34212c5c7.webp"
+                    alt="Profilo DS">
+                  <h4>One_Fire05#9397</h4>
+                  <p>DEV &amp; ATL.IT Leader</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/765148745561407499/faaad6aefca940e9d168f4e34212c5c7.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img
+                    src="https://cdn.discordapp.com/avatars/560969349393809409/a_1abc150a97bf77f345e95e22e0cada61.gif"
+                    alt="Profilo DS">
+                  <h4>Entity30#0001</h4>
+                  <p>Tecnico Discord &amp; Helper Z</p>
+                </div>
+                <div class="card-back">
+                  <img
+                    src="https://cdn.discordapp.com/avatars/560969349393809409/a_1abc150a97bf77f345e95e22e0cada61.gif"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/742419692869648444/23408d78e6fb79d932a8fee9e47c6a5c.webp"
+                    alt="Profilo DS">
+                  <h4>N4G_#9266</h4>
+                  <p>Tecnico Discord</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/742419692869648444/23408d78e6fb79d932a8fee9e47c6a5c.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/570016263602962452/dc92d17500bf7b30a3b4eb3d6bd668a5.webp"
+                    alt="Profilo DS">
+                  <h4>Flavio,,,#7638</h4>
+                  <p>Admin Z</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/570016263602962452/dc92d17500bf7b30a3b4eb3d6bd668a5.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/508007043135832085/57ebec79ae9b9e2a33d1f11aed4d47e3.webp"
+                    alt="Profilo DS">
+                  <h4>Cr3sh#4535</h4>
+                  <p>Admin Z</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/508007043135832085/57ebec79ae9b9e2a33d1f11aed4d47e3.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/709679829947252736/cf85be5f532986c034a813df22760303.webp"
+                    alt="Profilo DS">
+                  <h4>Lean848#3843</h4>
+                  <p>Mod Z</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/709679829947252736/cf85be5f532986c034a813df22760303.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/800416923099332610/c2f44db3b7c51902cd6f693924eed5b9.webp"
+                    alt="Profilo DS">
+                  <h4>Mrfieri_#9151</h4>
+                  <p>Helper AB</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/800416923099332610/c2f44db3b7c51902cd6f693924eed5b9.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/567054890535354405/7ed12ec862ba05f5c7291c7fed576b84.webp"
+                    alt="Profilo DS">
+                  <h4>ArmaGetor#2765</h4>
+                  <p>Staff Discord</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/567054890535354405/7ed12ec862ba05f5c7291c7fed576b84.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/885578020432257024/72fdfb5d7c7e4c471fb0ba76fe8a46d5.webp"
+                    alt="Profilo DS">
+                  <h4>ΣGӨ#9789</h4>
+                  <p>Staff Discord</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/885578020432257024/72fdfb5d7c7e4c471fb0ba76fe8a46d5.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/780898184981118987/8f8b5778c6ef03d0878d06379498ebff.webp"
+                    alt="Profilo DS">
+                  <h4>Snake-lol#5237</h4>
+                  <p>Atlants Leader</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/780898184981118987/8f8b5778c6ef03d0878d06379498ebff.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/470954775282974722/f746d0933646659770868e635dc6fee5.webp"
+                    alt="Profilo DS">
+                  <h4>!less#3766</h4>
+                  <p>Grafico &amp; Mod MC</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/470954775282974722/f746d0933646659770868e635dc6fee5.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profilo DS">
+                  <h4>ale501#4620</h4>
+                  <p>Video Editor</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/802575277838041178/66f779d5fcc1ccc068e6007d301744ce.webp"
+                    alt="Profilo DS">
+                  <h4>k i k#9077</h4>
+                  <p>Minecraft Staff</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/802575277838041178/66f779d5fcc1ccc068e6007d301744ce.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/689135002721714223/6b3acffe332f8455b262c56a468a1b8e.webp"
+                    alt="Profilo DS">
+                  <h4>caos#0916</h4>
+                  <p>Minecraft Staff</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/689135002721714223/6b3acffe332f8455b262c56a468a1b8e.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/411840001555300353/3c199ca1c133db9d9a6e94966bff0223.webp"
+                    alt="Profilo DS">
+                  <h4>seba_pinargoti#1468</h4>
+                  <p>FOAM Leader</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/411840001555300353/3c199ca1c133db9d9a6e94966bff0223.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5 mb-5 mb-xl-0 py-5">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front text-white">
+                  <img src="https://cdn.discordapp.com/avatars/946124866417999913/845dcce0f081996cfad7a618f1957954.webp"
+                    alt="Profilo DS">
+                  <h4>seba_pinargoti#1468</h4>
+                  <p>FOAM Leader</p>
+                </div>
+                <div class="card-back">
+                  <img src="https://cdn.discordapp.com/avatars/946124866417999913/845dcce0f081996cfad7a618f1957954.webp"
+                    alt="Profilo DS">
+                  <p><strong>Descrizione Utente 2</strong></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">DEV &amp; ATL.IT Leader</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/547438743284482050/588fb0808e06daaa2baba94db1274692.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">P4rzival#4943</h5>
-              <div class="fst-italic text-white">DEV &amp; ATL.IT Leader</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4"
-                src="https://cdn.discordapp.com/avatars/644589628589867018/a_336a30dce6e53893f652f07d0f93ccc1.gif"
-                alt="..." />
-              <h5 class="fw-bolder text-white">! Nicoボス#3211</h5>
-              <div class="fst-italic text-white">DEV &amp; ATL.IT Leader</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4"
-                src="https://cdn.discordapp.com/avatars/886603384914870332/a_601bf2573f6dc5e54a577f8791e43a52.gif"
-                alt="..." />
-              <h5 class="fw-bolder text-white">Chicco2008#1990</h5>
-              <div class="fst-italic text-white">DEV &amp; ATL.IT Leader</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/765148745561407499/faaad6aefca940e9d168f4e34212c5c7.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">One_Fire05#9397</h5>
-              <div class="fst-italic text-white">Streamer &amp; ATL.IT Leader</div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">Tecnici Discord</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4"
-                src="https://cdn.discordapp.com/avatars/560969349393809409/a_1abc150a97bf77f345e95e22e0cada61.gif"
-                alt="..." />
-              <h5 class="fw-bolder text-white">Entity30#0001</h5>
-              <div class="fst-italic text-white">Tecnico Discord &amp; Helper Z</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/742419692869648444/23408d78e6fb79d932a8fee9e47c6a5c.webp"
-                alt="..." />
-              <!--Che cosa cazzo guardi qua! lascia spazio all'amore-->
-              <h5 class="fw-bolder text-white">N4G_#9266</h5>
-              <div class="fst-italic text-white">Tecnico Discord</div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">Discord Admin</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/570016263602962452/dc92d17500bf7b30a3b4eb3d6bd668a5.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">Flavio,,,#7638</h5>
-              <div class="fst-italic text-white">Admin Z</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/508007043135832085/57ebec79ae9b9e2a33d1f11aed4d47e3.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">Cr3sh#4535</h5>
-              <div class="fst-italic text-white">Admin Z</div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">Mod Discord</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/709679829947252736/cf85be5f532986c034a813df22760303.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white text-center">Lean848#3843</h5>
-              <div class="fst-italic text-white">Mod Z</div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">Helper Discord</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/800416923099332610/c2f44db3b7c51902cd6f693924eed5b9.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">Mrfieri_#9151</h5>
-              <div class="fst-italic text-white">Helper AB</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/567054890535354405/7ed12ec862ba05f5c7291c7fed576b84.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">ArmaGetor#2765</h5>
-              <div class="fst-italic text-white">Staff Discord</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/885578020432257024/72fdfb5d7c7e4c471fb0ba76fe8a46d5.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">ΣGӨ#9789</h5>
-              <div class="fst-italic text-white">Staff Discord</div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">Fortnite</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/780898184981118987/8f8b5778c6ef03d0878d06379498ebff.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">Snake-lol#5237</h5>
-              <div class="fst-italic text-white">Atlants Leader</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/530001579248582657/91e93928dc03a7db9fe282d1880fe390.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">Gabrii_#8189</h5>
-              <div class="fst-italic text-white">Recruiter Fortnite</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/675035777230700544/4e288cf831557a6aadeb007d5375bbde.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">Ginobuonvino89#2591</h5>
-              <div class="fst-italic text-white">Recruiter Fortnite</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/935635699326124122/6760e9496d8c9680b1d9617ace072b6f.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">hyke#9233</h5>
-              <div class="fst-italic text-white">Accademici FN</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="..." />
-              <h5 class="fw-bolder text-white">Robb#4336</h5>
-              <div class="fst-italic text-white">Accademici FN</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/740621797803819069/70cd7aaa88bc2e3633387926f52b14fc.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">SPR1NGSH#7373</h5>
-              <div class="fst-italic text-white">Accademici FN</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/731763975556956181/30e8569a5ad7142f56c678a8ab6d4a30.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">ʸᵒᵘⁿᵍᶜᵉʳᵒᵒᶻ (っ◔◡◔)っ#4449</h5>
-              <div class="fst-italic text-white">Accademici FN</div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">Minecraft</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/470954775282974722/f746d0933646659770868e635dc6fee5.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white text-center">!less#3766</h5>
-              <div class="fst-italic text-white">Grafico &amp; Mod MC</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="..." />
-              <h5 class="fw-bolder text-white">ale501#4620</h5>
-              <div class="fst-italic text-white">Video Editor</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/802575277838041178/66f779d5fcc1ccc068e6007d301744ce.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">k i k#9077</h5>
-              <div class="fst-italic text-white">Minecraft Staff</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/689135002721714223/6b3acffe332f8455b262c56a468a1b8e.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">caos#0916</h5>
-              <div class="fst-italic text-white">Minecraft Staff</div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center text-white p-4">
-          <h2 class="fw-bolder">BrawlHalla</h2>
-        </div>
-        <div class="row gx-4 row-cols-2 row-cols-sm-2 row-cols-xxl-6 justify-content-center">
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/411840001555300353/3c199ca1c133db9d9a6e94966bff0223.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">seba_pinargoti#1468</h5>
-              <div class="fst-italic text-white">FOAM Leader</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/946124866417999913/845dcce0f081996cfad7a618f1957954.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">CivilW5494#0104</h5>
-              <div class="fst-italic text-white">FOAM Team</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="..." />
-              <h5 class="fw-bolder text-white">fabryc04#5153</h5>
-              <div class="fst-italic text-white">FOAM Member</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/467442690121007104/dbc61d77c35c63682c745ec7be148864.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">FaNatiik#7986</h5>
-              <div class="fst-italic text-white">FOAM Member</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/411900397620559883/6a6ad8809e60d12c84ad865fdc694799.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">kevinnnnnnnnn#3148</h5>
-              <div class="fst-italic text-white">FOAM Member</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/462994710047358978/7bf6ddcd8913c502aabc0bafc2e371db.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">LuigiB#6921</h5>
-              <div class="fst-italic text-white">FOAM Member</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/517075058301337600/9b24c37be272410f88895d176e768ab5.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">MbareSimo99#7123</h5>
-              <div class="fst-italic text-white">FOAM Member</div>
-            </div>
-          </div>
-          <div class="col mb-5 mb-5 mb-xl-0 py-5">
-            <div class="text-center">
-              <img class="img-fluid rounded-circle mb-4 px-4 ruotano-le-palle"
-                src="https://cdn.discordapp.com/avatars/428642738456756236/4ae8bd6a3c7855064714273c5759fc89.webp"
-                alt="..." />
-              <h5 class="fw-bolder text-white">orato848#9337</h5>
-              <div class="fst-italic text-white">FOAM Member</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
