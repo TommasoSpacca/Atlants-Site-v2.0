@@ -45,15 +45,15 @@
   <title>Atlants</title>
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark" id="overlay">
   <nav class="navbar navbar-dark bg-dark fixed-top shadow-lg">
     <div class="container">
       <button class="navbar-toggler" type="button" onclick="toggleSidebar()"><img width="32" src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></button>
       <div class="sidebar" id="sidebar">
-        <span class="close-sidebar" onclick="toggleSidebar()">&times;</span>
+        <span class="close-sidebar text-white" onclick="toggleSidebar()">&times;</span>
         <iframe class="discord-iframe" src="https://ptb.discord.com/widget?id=1051922618447581294&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
       </div>
-      <a class="navbar-brand" href="index.html"><img class="navbar-brand" src="assets/server-icon.png"></a>
+      <a href="index.html"><img style="padding-top: 2px; padding-bottom: 2px;" src="assets/server-icon.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -94,7 +94,6 @@
       </div>
     </div>
   </nav>
-  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
   <div>
     <h2 class="easteregg-obb">scemo chi legge</h2>
     <h1 class="easteregg">scemo chi legge</h1>
@@ -276,6 +275,7 @@
       </footer>
     </div>
   </div>
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 </body>
 
 </html>
