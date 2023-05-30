@@ -89,7 +89,7 @@
       $('#overlay').toggleClass('show');
     }
 
-    $(document).mouseup(function(e) {
+    $(document).mouseup(function (e) {
       var sidebar = $('#sidebar');
       if (!sidebar.is(e.target) && sidebar.has(e.target).length === 0) {
         sidebar.removeClass('show');
@@ -102,10 +102,13 @@
 <body class="bg-dark">
   <nav class="navbar navbar-dark bg-dark fixed-top shadow-lg">
     <div class="container">
-      <button class="navbar-toggler" type="button" onclick="toggleSidebar()"><img width="32" src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></button>
+      <button class="navbar-toggler" type="button" onclick="toggleSidebar()"><img width="32"
+          src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></button>
       <div class="sidebar" id="sidebar">
         <span class="close-sidebar text-white" onclick="toggleSidebar()">&times;</span>
-        <iframe class="discord-iframe" src="https://ptb.discord.com/widget?id=1051922618447581294&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        <iframe class="discord-iframe" src="https://ptb.discord.com/widget?id=1051922618447581294&theme=dark"
+          width="350" height="500" allowtransparency="true" frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
       </div>
       <a href="index.html"><img style="padding-top: 2px; padding-bottom: 2px;" src="assets/server-icon.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
@@ -123,25 +126,33 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link  m-1" aria-current="page" href="index.html"><h4>Home</h4></a>
+              <a class="nav-link  m-1" aria-current="page" href="index.html">
+                <h4>Home</h4>
+              </a>
             </li>
-            <li class="nav-item m-1"><h5>Prodotti</h5></li>
+            <li class="nav-item m-1">
+              <h5>Prodotti</h5>
+            </li>
             <li class="nav-tabs"></li>
             <li class="nav-item m-2">
               <a class="nav-link cardbtw" href="minecraft.html"><img src="assets/mc-logo.png" width="85%"></a>
             </li>
             <li class="nav-item m-2">
               <a class="nav-link cardbtw" href="fortnite.html"><img src="assets/fn-logo-old.png" width="85%"></a>
-            </li> 
+            </li>
             <li class="nav-item m-2">
               <a class="nav-link cardbtw" href="brawlhalla.html"><img src="assets/bh-logo-old.png" width="85%"></a>
             </li>
             <li class="nav-tabs"></li>
             <li class="nav-item">
-              <a class="nav-link active m-1" href="about.html"><h4>Chi Siamo</h4></a>
+              <a class="nav-link active m-1" href="about.html">
+                <h4>Chi Siamo</h4>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link m-1" href="index.html#supporto"><h4>Supporto</h4></a>
+              <a class="nav-link m-1" href="index.html#supporto">
+                <h4>Supporto</h4>
+              </a>
             </li>
           </ul>
         </div>
@@ -218,7 +229,8 @@
                 <div class="card-back">
                   <img src="https://cdn.discordapp.com/avatars/547438743284482050/588fb0808e06daaa2baba94db1274692.webp"
                     alt="Profilo DS">
-                  <p><strong>Aspirante programmatore che tende ad esplorare nuovi orizzonti della programmazione e del settore high tech.</strong></p>
+                  <p><strong>Aspirante programmatore che tende ad esplorare nuovi orizzonti della programmazione e del
+                      settore high tech.</strong></p>
                 </div>
               </div>
             </div>
@@ -410,7 +422,8 @@
                 <div class="card-back">
                   <img src="https://cdn.discordapp.com/avatars/780898184981118987/8f8b5778c6ef03d0878d06379498ebff.webp"
                     alt="Profilo DS">
-                  <p><strong>Appassionato coach/recruiter di e-sports, esperto di gioco, strategie vincenti e talent scouting.</strong></p>
+                  <p><strong>Appassionato coach/recruiter di e-sports, esperto di gioco, strategie vincenti e talent
+                      scouting.</strong></p>
                 </div>
               </div>
             </div>
@@ -517,55 +530,56 @@
           </div>
         </div>
     </section>
-  <div class="bg-dark" id="supporto">
-    <div class="container col-xxl-auto px-5 py-5">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
-        <div class="col-lg-5">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Hai Bisogno di Supporto?</h1>
-          <p class="lead text-white">Non ti preoccupare, se hai bisogno di supporto puoi scrivere direttamente o su
-            discord oppure all'email: <a class="fw-bold">support@atlants.it</a></p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a href="mailto:support@atlants.it"><button type="button" class="btn btn-primary btn-lg px-4">Scrivi
-                un'email</button></a>
-            <a href="https://discord.gg/NczsnPkYPK"><button type="button"
-                class="btn btn-secondary btn-lg px-4 me-md-2">Entra Nel Server Discord</button></a>
+    <div class="bg-dark" id="supporto">
+      <div class="container col-xxl-auto px-5 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+          <div class="col-lg-5">
+            <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Hai Bisogno di Supporto?</h1>
+            <p class="lead text-white">Non ti preoccupare, se hai bisogno di supporto puoi scrivere direttamente o su
+              discord oppure all'email: <a class="fw-bold">support@atlants.it</a></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <a href="mailto:support@atlants.it"><button type="button" class="btn btn-primary btn-lg px-4">Scrivi
+                  un'email</button></a>
+              <a href="https://discord.gg/NczsnPkYPK"><button type="button"
+                  class="btn btn-secondary btn-lg px-4 me-md-2">Entra Nel Server Discord</button></a>
+            </div>
+          </div>
+          <div class="col-auto col-sm-auto col-lg-7">
+            <img src="https://www.cuorementelab.it/wp-content/uploads/2020/04/128173861_m.jpg?x83247"
+              class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500"
+              loading="lazy">
           </div>
         </div>
-        <div class="col-auto col-sm-auto col-lg-7">
-          <img src="https://www.cuorementelab.it/wp-content/uploads/2020/04/128173861_m.jpg?x83247"
-            class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-        </div>
+      </div>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center border-top py-3 my-4">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <img class="bi" width="32" height="32" src="assets/server-icon.png">
+            </a>
+            <span class="mb-3 mb-md-0 "><a class="text-white" href="privacy.html">© 2023 Atlants, Tutti i diritti
+                riservati</a></span>
+          </div>
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.twitch.tv/atlants_"><img class="bi"
+                  width="32" height="32" src="https://www.freepnglogos.com/uploads/purple-twitch-logo-png-18.png"></a>
+            </li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/atlants_clan/"><img
+                  class="bi" width="32" height="32"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"></a>
+            </li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.tiktok.com/@atlants_"><img class="bi"
+                  width="32" height="32"
+                  src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Tiktok-512.png"></a>
+            </li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/NczsnPkYPK"><img class="bi"
+                  width="32" height="32"
+                  src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </div>
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center border-top py-3 my-4">
-        <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-            <img class="bi" width="32" height="32" src="assets/server-icon.png">
-          </a>
-          <span class="mb-3 mb-md-0 "><a class="text-white" href="privacy.html">© 2023 Atlants, Tutti i diritti
-              riservati</a></span>
-        </div>
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-body-secondary" href="https://www.twitch.tv/atlants_"><img class="bi"
-                width="32" height="32" src="https://www.freepnglogos.com/uploads/purple-twitch-logo-png-18.png"></a>
-          </li>
-          <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/atlants_clan/"><img class="bi"
-                width="32" height="32"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"></a>
-          </li>
-          <li class="ms-3"><a class="text-body-secondary" href="https://www.tiktok.com/@atlants_"><img class="bi"
-                width="32" height="32"
-                src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Tiktok-512.png"></a>
-          </li>
-          <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/NczsnPkYPK"><img class="bi"
-                width="32" height="32"
-                src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></a>
-          </li>
-        </ul>
-      </footer>
-    </div>
-  </div>
 </body>
 
 </html>
