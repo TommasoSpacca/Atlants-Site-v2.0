@@ -14,11 +14,12 @@
     content="Gli Atlants sono un team E-sportivo oltre che un brand che in ambito competitivo si occupa di offrire dei servizi e degli aiuti ai giocatori con cui ci mettiamo in contatto, ad Atlants sono collegati i FOAM Clan competitivo che su Brawlhalla compete organizzando tornei ed eventi con soldi in palio, in oltre Atlants possiede Atlant.it server Minecraft Italiano che per primo in Italia crea un ambiente competitivo a quello che sono le già note badwars, nasciamo dall' idea utopica di poter far sorridere le persone che fanno parte della nostra grande realtà creando un ambiente familiare tuttavia lasciando la professionalità che in Atlants non manca, il progetto apre ufficialmente il 1° gennaio del 2023 dopo un mese di lavoro in cui lo staff si è occupato di creare i contenuti che ad oggi tutti potete vedere, l'idea del clan arrivò nei primi di dicembre del 2022 arrivando a quello che ad oggi voi conoscete come Atlants, il nome che vedete è dato dal famoso mito greco di Atlante, da cui il nostro motto ' mundi noster virorum ' dal latino ' il mondo di noi uomini ' questo a rappresentare la figura in se del mito che sorregge il mondo sulla schiena a significare che noi abbiamo la forza di fare tutto ciò che vogliamo.Noi siamo gli Atlants.">
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="js/bootstrap.js"></script>
   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="cookies.js"></script>
   <script src="https://kit.fontawesome.com/7855b5af31.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="text.js"></script>
   <script>
     $(window).scroll(function () {
       if ($(this).scrollTop() > 0) {
@@ -46,7 +47,11 @@
 </head>
 
 <body class="bg-dark" id="overlay">
-  <nav class="navbar navbar-dark bg-dark fixed-top shadow-lg">
+  <a href="#" class="scroll-button"><i class="fas fa-arrow-up"></i></a>
+  <div class="px-4 py-5 text-center text-white body-night">
+    <h1 class="fw-bold text-white display-1" style="padding: 7%;" id="idElemento">Atlants</h1>
+  </div>
+  <nav class="navbar navbar-dark bg-dark shadow-lg" style="z-index: 9999;">
     <div class="container">
       <button class="navbar-toggler" type="button" onclick="toggleSidebar()"><img width="32"
           src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></button>
@@ -72,7 +77,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active m-1" aria-current="page" href="index.html">
+              <a class="nav-link m-1" aria-current="page" href="index.html">
                 <h4>Home</h4>
               </a>
             </li>
@@ -80,14 +85,14 @@
               <h5>Prodotti</h5>
             </li>
             <li class="nav-tabs"></li>
-            <li class="nav-item m-2">
-              <a class="nav-link cardbtw" href="minecraft.html"><img src="assets/mc-logo.png" width="85%"></a>
+            <li class="nav-item m-1">
+              <a class="nav-link m-1 cardbtw" href="minecraft.html"><img src="assets/mc-logo-min.png" width="15%">  Minecraft</a>
             </li>
-            <li class="nav-item m-2">
-              <a class="nav-link cardbtw" href="fortnite.html"><img src="assets/fn-logo-old.png" width="85%"></a>
+            <li class="nav-item m-1">
+              <a class="nav-link m-1 cardbtw" href="fortnite.html"><img src="assets/fn-logo-min.png" class="rounded" width="15%">  Fortnite</a>
             </li>
-            <li class="nav-item m-2">
-              <a class="nav-link cardbtw" href="brawlhalla.html"><img src="assets/bh-logo-old.png" width="85%"></a>
+            <li class="nav-item m-1">
+              <a class="nav-link m-1 cardbtw" href="brawlhalla.html"><img src="assets/bh-logo-min.png" width="15%">  BrawlHalla</a>
             </li>
             <li class="nav-tabs"></li>
             <li class="nav-item">
@@ -105,20 +110,6 @@
       </div>
     </div>
   </nav>
-  <div>
-    <h2 class="easteregg-obb">scemo chi legge</h2>
-    <h1 class="easteregg">scemo chi legge</h1>
-  </div>
-  <a href="#" class="scroll-button"><i class="fas fa-arrow-up"></i></a>
-  <div class="px-4 py-5 text-center bg-dark text-white">
-    <!-- <img class="d-block mx-auto mb-4 w-auto" src="assets/server-icon.png" alt="" width="240" height="240"> -->
-    <img src="assets/ATLANTS_LOGO_SCRITTA.png" class=" display-5 fw-bold text-white" style="width: 40%;">
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4"></p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      </div>
-    </div>
-  </div>
   <div class="bg-light px-5 py-4 conto-alla-rovescia-revers">
     <h2 class="container container-atl text-center text-dark px-5 py-3">Data di pubblicazione di Atlants</h2>
     <iframe id="online-alarm-kur-iframe"

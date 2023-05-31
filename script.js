@@ -1,7 +1,7 @@
 //poi si vede cosa metterci :)
 function copiaTesto() {
     // seleziona il testo da copiare
-    var testo = $("#testo")[0];
+    var testo = document.getElementById("testo");
     var selezione = window.getSelection();
     var intervallo = document.createRange();
     intervallo.selectNodeContents(testo);
