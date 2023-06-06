@@ -9,7 +9,7 @@ function animaTesto(idElemento, testoFinale) {
 
     const animazione = setInterval(() => {
       if (indiceCarattere < lunghezzaTesto) {
-        testoAttuale += testoFinale[indiceCarattere];
+        testoAttuale += caratteriStrani[Math.floor(Math.random() * caratteriStrani.length)];
         elemento.text(testoAttuale);
         indiceCarattere++;
       } else {
@@ -27,9 +27,18 @@ function animaTesto(idElemento, testoFinale) {
   function avviaAnimazione() {
     const testi = ['Clan di Fortnite', 'Server Minecraft Minigame', 'Clan di BrawlHalla', 'Atlants', 'In Arrivo il 20/06/2023'];
     const idElemento = 'idElemento';
-    const testoFinale = testi[Math.floor(Math.random() * testi.length)];
+    let i = 0;
 
-    animaTesto(idElemento, testoFinale);
+    setInterval(() => {
+      if (i < testi.length) {
+        animaTesto(idElemento, testi[i]);
+        i++;
+      } else {
+        i = 0;
+      }
+    }, 5000);
   }
 
-  setInterval(avviaAnimazione, 5000);
+  avviaAnimazione();
+
+

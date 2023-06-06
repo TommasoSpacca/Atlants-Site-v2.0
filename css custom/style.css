@@ -56,6 +56,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
+    z-index: 10000;
   }
   
   .scroll-button:hover {
@@ -291,6 +292,10 @@ to {
 } 
 }
 
+.img-tw{
+  width: 5%;
+}
+
 @media (max-width: 768px) {
     .easteregg  {
         color: rgba(33, 37, 41, 1);
@@ -312,5 +317,8 @@ to {
     }
     .bh-img {
       width: 45%;
+    }
+    .img-tw{
+      width: 20%;
     }
 }
