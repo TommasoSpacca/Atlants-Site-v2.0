@@ -29,7 +29,7 @@
    </url>
    <url>
       <loc>https://atlants.it/brawlhalla.html</loc>
-      <priority>0.7</priority>
+      <priority>0.8</priority>
       <image:image>
          <image:loc>https://atlants.it/assets/bh.jpg</image:loc>
          <image:caption>Immagine illustrativa della home principale</image:caption>
@@ -37,8 +37,26 @@
       <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
    <url>
+      <loc>https://atlants.it/affiliati.html</loc>
+      <priority>0.8</priority>
+      <image:image>
+         <image:loc>https://atlants.it/assets/ATLANTS_Logo-C_Live_Moc_Blur.jpg</image:loc>
+         <image:caption>Immagine illustrativa della home principale</image:caption>
+      </image:image>
+      <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
+   </url>
+   <url>
+   <url>
+      <loc>https://atlants.it/privacy.html</loc>
+      <priority>0.7</priority>
+      <image:image>
+         <image:loc>https://atlants.it/assets/ATLANTS_Logo-C_Live_Moc_Blur.jpg</image:loc>
+         <image:caption>Immagine illustrativa della home principale</image:caption>
+      </image:image>
+      <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
+   </url>
       <loc>https://map.atlants.it:8100/</loc>
-      <priority>0.6</priority>
+      <priority>0.7</priority>
       <image:image>
          <image:loc>https://atlants.it/assets/vanilla1.png</image:loc>
          <image:caption>Immagine illustrativa della Vanilla di Minecraft</image:caption>
