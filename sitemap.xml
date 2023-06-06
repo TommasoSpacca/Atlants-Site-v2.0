@@ -54,6 +54,7 @@
       </image:image>
       <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
+   <url>
       <loc>https://map.atlants.it:8100/</loc>
       <priority>0.7</priority>
       <image:image>
