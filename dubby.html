@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css custom/style.css" />
+  <link rel="stylesheet" href="css custom/affiliati.css" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <script src="js custom/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js custom/cookies.js"></script>
+  <script src="https://kit.fontawesome.com/7855b5af31.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js custom/text.js"></script>
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 0) {
+        $('body').addClass('scrolling-down');
+      } else {
+        $('body').removeClass('scrolling-down');
+      }
+    });
+  </script>
+  <script>
+    function toggleSidebar() {
+      $('#sidebar').toggleClass('show');
+      $('#overlay').toggleClass('show');
+    }
+
+    $(document).mouseup(function (e) {
+      var sidebar = $('#sidebar');
+      if (!sidebar.is(e.target) && sidebar.has(e.target).length === 0) {
+        sidebar.removeClass('show');
+        $('#overlay').removeClass('show');
+      }
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2039080317071750"
+  crossorigin="anonymous"></script>
+  <title>Atlants x Dubby</title>
+</head>
+<body class="atl-gradiant" id="overlay">
+  <nav class="navbar navbar-dark bg-dark shadow-lg" style="z-index: 9999;">
+    <div class="container">
+      <button class="navbar-toggler" type="button" onclick="toggleSidebar()"><img width="32"
+          src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></button>
+      <div class="sidebar" id="sidebar">
+        <span class="close-sidebar text-white" onclick="toggleSidebar()">&times;</span>
+        <iframe class="discord-iframe" src="https://ptb.discord.com/widget?id=1051922618447581294&theme=dark"
+          width="350" height="500" allowtransparency="true" frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </div>
+      <a href="index.html"><img style="padding-top: 2px; padding-bottom: 2px;" src="assets/server-icon.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand" href="#"><img class="navbar-brand" src="assets/ATLANTS_LOGO_SCRITTA.png"
+              width="85%"></a>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link m-1" aria-current="page" href="index.html">
+                <h4>Home</h4>
+              </a>
+            </li>
+            <li class="nav-item m-1">
+              <h5>Prodotti</h5>
+            </li>
+            <li class="nav-tabs"></li>
+            <li class="nav-item m-1">
+              <a class="nav-link m-1 cardbtw" href="minecraft.html">
+                <img src="assets/mc-logo-min.png" width="15%">  Minecraft
+              </a>
+            </li>
+            <li class="nav-item m-1">
+              <a class="nav-link m-1 cardbtw" href="fortnite.html">
+                <img src="assets/fn-logo-min.png" class="rounded" width="15%">  Fortnite
+              </a>
+            </li>
+            <li class="nav-item m-1">
+              <a class="nav-link m-1 cardbtw" href="brawlhalla.html">
+                <img src="assets/bh-logo-min.png" width="15%">  BrawlHalla
+              </a>
+            </li>
+            <li class="nav-tabs"></li>
+            <li class="nav-item">
+              <a class="nav-link m-1" href="about.html">
+                <h4>Chi Siamo</h4>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link m-1" href="affiliati.html">
+                <h4>Affiliati</h4>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link m-1" href="index.html#supporto">
+                <h4>Supporto</h4>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <a href="#" class="scroll-button"><i class="fas fa-arrow-up"></i></a>
+  <div class="px-4 py-5 text-center text-white atl-gradiant" style=" background-size: cover; background-position: 7%; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
+    <!-- <img class="d-block mx-auto mb-4 w-auto" src="assets/server-icon.png" alt="" width="240" height="240"> -->
+    <div class="d-flex justify-content-center align-items-center py-lg-5">
+      <img src="dubby/dubby logo v2-01.png" class="display-5 text-white img-tw" style="width: 30%;">
+      <h6 class="display-6 fw-bold lh-1 mb-3 text-white text-success">  X  </h6>
+      <img src="assets/ATLANTS_LOGO_SCRITTA.png" class="display-5 text-white img-tw" style="width: 30%;">
+    </div>
+    <div class="col-lg-6 mx-auto">
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-banner" class="alert alert-info alert-dismissible fade show position-fixed bottom-0 right-0 mb-4 mr-4"
+    role="alert" style="z-index: 9998;">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <div class="flex-grow-1">
+        Ti piacciono i Biscotti 🍪? Si da il caso che Atlants utilizza i cookie per offrirti un'esperienza migliore,
+        clicca qui sei hai bisogno di...
+        <a href="privacy.html" class="alert-link">Maggiori informazioni</a>
+      </div>
+      <div class="text-right mt-2 mt-sm-0">
+        <button type="button" class="btn btn-primary btn-sm" id="cookie-accept">Accetta</button>
+      </div>
+      <button type="button" class="btn btn-danger close" data-dismiss="alert" aria-label="Chiudi">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+    <div>
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="dubby/banner for stream1.png" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700"
+              height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Info</h1>
+            <p class="lead text-white">Dubby è diverso perchè come dicono loro  è stato formulato per darti energia e concentrazione senza nervosismo o crash 
+              Quindi cosa aspetti usando il nostro codice  Atlants nel check up riceverai il 10% di sconto</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start lh-1 mb-3">
+              <a href="https://www.dubby.gg/"><button type="button"
+                  class="btn btn-primary btn-lg px-4 me-md-2">Acquista Ora!</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+          <!--<div class="col-10 col-sm-8 col-lg-6">
+                  <img src="assets/lobby mc.png" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                </div>-->
+          <div class="col-lg-6 text-center">
+            <h1 class="display-5 text-white fw-bold lh-1 mb-3" id="myText">I Loro Prodotti</h1>
+            <p class="lead text-white" id="myText">Qui troverete tutte le immagini dei vari prodotti acquistabili con lo sconto esclusivo.</p>
+            <!--<h4 class="fw-bold lh-1 mb-2 text-dark">Server IP: <a class="fw-bold lh-1 mb-1 text-dark" id="testo">mc.atlants.it</a></h4>-->
+            <br>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start lh-1 mb-3 button-container">
+              <a href="https://www.dubby.gg/" class="centered-button"><button type="button" class="btn btn-primary btn-lg px-4 centered-button">Acquista Ora!</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container col-xxl-auto px-5 py-5">
+        <div class="row flex-lg-row align-items-center g-2 py-2 px-2">
+          <div class="col-lg-3">
+            <img src="dubby/DUBBY - Hydro - StrawBna - RENDER - FRONT.png" class="d-block mx-lg-auto img-fluid rounded" id="myImage" alt="Bootstrap Themes"
+              width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-3">
+            <img src="dubby/dubsludge png.png" class="d-block mx-lg-auto img-fluid rounded" id="myImage" alt="Bootstrap Themes"
+              width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-3">
+            <img src="dubby/galaxy grenade png.png" class="d-block mx-lg-auto img-fluid rounded" id="myImage" alt="Bootstrap Themes"
+              width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-3">
+            <img src="dubby/ShortBlackfront TRANSPARENT.png" class="d-block mx-lg-auto img-fluid rounded" id="myImage" alt="Bootstrap Themes"
+              width="50%" height="500" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+      
+  <div class="bg-dark" id="supporto">
+    <div class="container col-xxl-auto px-0 py-2">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+        <div class="col-lg-5">
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Hai Bisogno di Supporto?</h1>
+          <p class="lead text-white">Non ti preoccupare, se hai bisogno di supporto puoi scrivere direttamente o su
+            discord oppure all'email: <a class="fw-bold">support@atlants.it</a></p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="mailto:support@atlants.it"><button type="button" class="btn btn-primary btn-lg px-4">Scrivi
+                un'email</button></a>
+            <a href="https://discord.gg/NczsnPkYPK"><button type="button"
+                class="btn btn-outline-info  btn-lg px-4 me-md-2">Entra Nel Server Discord</button></a>
+          </div>
+        </div>
+        <div class="col-auto col-sm-auto col-lg-7">
+          <img src="https://www.cuorementelab.it/wp-content/uploads/2020/04/128173861_m.jpg?x83247"
+            class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center border-top py-3 my-4">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <img class="bi" width="32" height="32" src="assets/server-icon.png">
+          </a>
+          <span class="mb-3 mb-md-0 "><a class="text-white" href="privacy.html">© 2023 Atlants, Tutti i diritti
+              riservati</a></span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.twitch.tv/atlants_"><img class="bi"
+                width="32" height="32" src="https://www.freepnglogos.com/uploads/purple-twitch-logo-png-18.png"></a>
+          </li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/atlants_clan/"><img class="bi"
+                width="32" height="32"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"></a>
+          </li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.tiktok.com/@atlants_"><img class="bi"
+                width="32" height="32"
+                src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Tiktok-512.png"></a>
+          </li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/NczsnPkYPK"><img class="bi"
+                width="32" height="32"
+                src="https://files.cults3d.com/uploaders/13940850/illustration-file/af3a9ca5-76dd-4f06-b86d-bd7d73495f40/1bcc0f0aefe71b2c8ce66ffe8645d365.png"></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+</body>
+</html>
