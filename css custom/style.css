@@ -14,6 +14,14 @@
     background: rgb(32,49,101);
     background: linear-gradient(180deg, rgba(32,49,101,1) 0%, rgba(87,130,208,1) 50%, rgba(190,47,166,1) 100%);
 }
+.val-gradiant {
+  background: rgb(18,28,37);
+  background: -moz-linear-gradient(15deg, rgba(18,28,37,1) 0%, rgba(87,40,46,1) 50%, rgba(241,66,81,1) 100%);
+  background: -webkit-linear-gradient(15deg, rgba(18,28,37,1) 0%, rgba(87,40,46,1) 50%, rgba(241,66,81,1) 100%);
+  background: linear-gradient(15deg, rgba(18,28,37,1) 0%, rgba(87,40,46,1) 50%, rgba(241,66,81,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121c25",endColorstr="#f14251",GradientType=1);
+}
+
 .nether-gradiant {
   background: rgb(221,188,18);
   background: -moz-linear-gradient(0deg, rgba(221,188,18,1) 0%, rgba(198,122,10,1) 50%, rgba(201,32,15,1) 100%);
