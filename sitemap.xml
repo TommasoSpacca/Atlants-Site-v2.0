@@ -19,11 +19,11 @@
       <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
    <url>
-      <loc>https://atlants.it/fortnite.html</loc>
+      <loc>https://atlants.it/valorant.html</loc>
       <priority>0.8</priority>
       <image:image>
-         <image:loc>https://atlants.it/assets/fn.jpg</image:loc>
-         <image:caption>Immagine illustrativa di Fortnite</image:caption>
+         <image:loc>https://atlants.it/assets/valo.jpg</image:loc>
+         <image:caption>Immagine illustrativa di Valorant</image:caption>
       </image:image>
       <xhtml:link rel="icon" href="https://atlants.it/assets/favicon.ico" />
    </url>
