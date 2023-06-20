@@ -25,7 +25,7 @@ function animaTesto(idElemento, testoFinale) {
   }
 
   function avviaAnimazione() {
-    const testi = ['Clan di Fortnite', 'Server Minecraft Minigame', 'Clan di BrawlHalla', 'Atlants', 'In Arrivo il 20/06/2023'];
+    const testi = ['Clan di Valorant', 'Server Minecraft Minigame', 'Clan di BrawlHalla', 'Atlants', 'In Arrivo il 20/07/2023'];
     const idElemento = 'idElemento';
     let i = 0;
 
